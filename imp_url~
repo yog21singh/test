@@ -1,0 +1,22 @@
+For installation of nagios:  http://nagios.sourceforge.net/docs/3_0/quickstart-ubuntu.html
+For adding remote server to najios:  http://www.tecmint.com/how-to-add-linux-host-to-nagios-monitoring-server/
+For installing jenkins:  https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu
+For including snmp plugin:  http://www.networktechinc.com/nagios-plugin.html
+For new plugin:  http://zaman4linux.blogspot.in/2012/04/configuring-nagios-to-monitor-services.html
+For  configure: error: Cannot find ssl libraries : 
+        
+      apt-get install apt-file
+      apt-file update
+      apt-file search libssl | grep libssl-dev
+      with the answer of this last command, you'll find where are located the librairies
+
+      for me it was : libssl-dev: /usr/lib/i386-linux-gnu/libssl.so
+
+
+      So the "configure" command is : ./configure --with-ssl=/usr/bin/openssl --with-ssl-lib=/usr/lib/i386-linux-gnu/
+
+For configuring postfix for sending mail:
+      http://hints.macworld.com/article.php?story=20081217161612647
+      
+For deciding the notification:
+      http://nagios.sourceforge.net/docs/3_0/statetypes.html

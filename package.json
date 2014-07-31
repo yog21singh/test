@@ -1,0 +1,12 @@
+{
+  "name": "hello-world",
+  "description": "hello world test app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.4.4",
+    "formidable": "^1.0.15",
+    "mongojs": "^0.13.0",
+    "nunjucks": "^1.0.5"
+  }
+}

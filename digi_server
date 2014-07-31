@@ -1,0 +1,52 @@
+
+var app = express();
+var DEFAULT_APPLICATION_PORT = 9000;
+
+app.configure(function () { //Configure the application
+  app.set('port', process.env.APP_PORT || DEFAULT_APPLICATION_PORT);
+  app.use(express.favicon()); // TODO: create and add Digiapt favicon
+  app.use(express.static(__dirname + '/web'));
+  app.use(app.router);
+});
+
+app.get('/hello', function(req, res){
+  res.send('Digiapt says "Hello!"');
+});
+
+app.post('/contact', function(req, res){
+
+  var form = new formidable.IncomingForm();
+Write failed: Broken pipe
+digiapt@digiapt-desktop:~/Yogesh$ sudo mongo
+    res.send(200);
+    console.log(util.inspect({fields: fields, files: files}));
+
+    var transport = nodemailer.createTransport("sendmail", {
+      path: "/usr/sbin/sendmail"
+    });
+
+    // setup e-mail data with unicode symbols
+    var mailOptions = {
+       from: "Digiapt Website <website@digiapt.com>", // sender address
+       to: "anil.gracias@digiapt.com", // list of receivers
+       subject: "Note from the virtual world", // Subject line
+       text: "Hello world ✔", // plaintext body
+       html: "<b>Hello world ✔</b>" // html body
+    };
+
+    mailOptions.html = "<b>Origin: Contact</b><br/>" + util.inspect({fields: fields, files: files});
+    mailOptions.text = "Origin: Contact. " + util.inspect({fields: fields, files: files});
+
+    // send mail with defined transport object
+    transport.sendMail(mailOptions, function(error, response){
+      if(error) {
+          console.log(error);
+      } else {
+          console.log("Message sent: " + response.message);
+      }
+      transport.close(); // shut down the connection pool, no more messages
+    });
+
+  });
+
+

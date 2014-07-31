@@ -1,0 +1,22 @@
+
+#name,#query,#phone,#eMail
+{
+  position:absolute;
+  left:100px;
+  width:600px;
+}
+#submit
+{
+  position:relative;
+  top:100px;
+  left:600px;
+}
+h1
+{
+  text-align:center;
+}
+.content
+{
+position:absolute;
+left:300px;
+}
